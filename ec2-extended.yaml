@@ -1,0 +1,100 @@
+Resources:
+  Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      AdditionalInfo: "String"
+      Affinity: "String"
+      AvailabilityZone: "String"
+
+      BlockDeviceMappings:
+        - DeviceName: "/dev/xvda"
+          Ebs:
+            VolumeSize: 8
+
+      CpuOptions:
+        CoreCount: 1
+        ThreadsPerCore: 1
+
+      CreditSpecification:
+        CPUCredits: "standard"
+
+      DisableApiTermination: false
+      EbsOptimized: false
+
+      ElasticGpuSpecifications:
+        - Type: "String"
+
+      ElasticInferenceAccelerators:
+        - Type: "String"
+
+      EnclaveOptions:
+        Enabled: false
+
+      HibernationOptions:
+        Configured: false
+
+      HostId: "String"
+      HostResourceGroupArn: "String"
+      IamInstanceProfile: "String"
+      ImageId: "ami-xxxxxxxxxxxxxxxxx"
+      InstanceInitiatedShutdownBehavior: "stop"
+      InstanceType: "t3.micro"
+      Ipv6AddressCount: 0
+
+      Ipv6Addresses:
+        - Ipv6Address: "2001:db8::1"
+
+      KernelId: "String"
+      KeyName: "String"
+
+      LaunchTemplate:
+        LaunchTemplateId: "String"
+        Version: "1"
+
+      LicenseSpecifications:
+        - LicenseConfigurationArn: "String"
+
+      MetadataOptions:
+        HttpEndpoint: "enabled"
+        HttpTokens: "optional"
+
+      Monitoring: false
+
+      NetworkInterfaces:
+        - DeviceIndex: "0"
+          AssociatePublicIpAddress: true
+
+      PlacementGroupName: "String"
+
+      PrivateDnsNameOptions:
+        HostnameType: "ip-name"
+        EnableResourceNameDnsARecord: true
+        EnableResourceNameDnsAAAARecord: false
+
+      PrivateIpAddress: "10.0.0.10"
+      PropagateTagsToVolumeOnCreation: false
+      RamdiskId: "String"
+
+      SecurityGroupIds:
+        - "sg-xxxxxxxxxxxxxxxxx"
+
+      SecurityGroups:
+        - "String"
+
+      SourceDestCheck: true
+
+      SsmAssociations:
+        - DocumentName: "String"
+
+      SubnetId: "subnet-xxxxxxxxxxxxxxxxx"
+
+      Tags:
+        - Key: "Name"
+          Value: "Instance"
+
+      Tenancy: "default"
+      UserData: "String"
+
+      Volumes:
+        - Device: "/dev/xvdf"
+          VolumeId: "vol-xxxxxxxxxxxxxxxxx"
