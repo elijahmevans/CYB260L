@@ -1,3 +1,6 @@
+# Creates additional EBS volume
+# 2
+# 1/20/2026
 AWSTemplateFormatVersion: "2010-09-09"
 Description: Amazon Elastic Compute Cloud (EC2) Template
 Parameters:
@@ -14,3 +17,9 @@ Resources:
       NetworkInterfaces:
         - AssociatePublicIpAddress: "true"
       DeviceIndex: "0"
+BlockDeviceMappings:
+     - DeviceName: /dev/sdm
+        Ebs:
+             VolumeType: gp2
+             DeleteOnTermination: false
+             VolumeSize: 20
